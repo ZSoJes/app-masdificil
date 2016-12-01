@@ -1,0 +1,26 @@
+<div class="top-nav">
+  <ul class="fixed">
+    <li><a href="/"><img id="logo" src="/logo.png" width="140" height="43 ">
+      <li><a href="/signup">Registrate</a></li>
+      <li><a href="/login">Ingresar</a></li>
+      <li><a href="/logout">Salir</a></li>
+    </ul>
+  </div>
+
+  <h1 style="padding-top:70px;">Editar Usuario</h1>
+
+  <form class="caja" action="/users/<%= @user.id %>" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <label>Ingrese su Email:</label><br>
+    <input type="text" name="user[email]"><br><br>
+    <label>Ingrese su password actual:</label><br>
+    <input type="password" name="user[password]"><br><br>
+    <label>Nueva contraseña:</label><br>
+    <input type="password" name="user[new_password]"><br><br>
+    <input class="myButton" type="submit" value="Aceptar">
+    </form>
+
+    <form style="border:none" action="/users/<%=@user.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+    <center><input class="error"type="submit" value="Borrar Usuario !!!"></center>
+  </form>

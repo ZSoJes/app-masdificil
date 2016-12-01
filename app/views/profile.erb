@@ -1,0 +1,88 @@
+
+<%@user = User.find_by(id: session[:user_id])%>
+<div class="uk-container uk-container-center uk-margin-top">
+    <h1 style="color:white">Bienvenido</h1>
+
+    <form class="caja">
+        <label class="profile">Usuario :
+            <b><%=@user.name %></b>
+        </label>
+        <label class="profile">Email :
+            <b><%= @user.email %></b>
+        </label>
+        <div></form>
+    </div>
+
+<hr>
+<br>
+<h2>Deseas ayudar a un animal indefenso</h2>
+<p>Puedes presionar el siguiente botón para publicar un animalito</p>
+
+<button class="mostrar_adop">Dar en adopcion</button>
+<style type="text/css">
+.estilo-form{
+    background:dodgerblue;
+    color:white;
+    font-weight: bold;
+    border:2px solid lightseagreen;
+    box-shadow: 2px 2px 10px lawngreen;
+    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+    margin-left: 30%;
+}
+table{
+    width: 400px;
+    margin: 20px 40px;
+}
+tr td:first-child{
+  max-width: 120px;
+  padding: 5px;
+}
+textarea{
+
+}
+</style>
+
+<div id="form_hidden" style="display: none">
+    <div class="estilo-form">
+<form action="/subir" enctype="multipart/form-data" method="post">  <!-- enctype es ocupdao para subir la foto y demas datos sin codificar al servidor -->
+<table>
+    <tr>
+    <td><label>Nombre:</label></td>
+    <td><input type="text" name="namePet" placeholder="Escribe un nombre"></td>
+    </tr>
+
+    <tr>
+    <td><label>Edad:</label></td>
+    <td><input type="text" name="age" placeholder="edad en dias, meses o años"></td>
+    </tr>
+
+    <tr>
+    <td><label>Especie:</label></td>
+
+    <td><input type="radio" name="especie" value="perro" checked> Perro
+    <input type="radio" name="especie" value="gato"> Gato</td>
+    </tr>
+
+    <tr>
+    <td><label>Raza:</label></td>
+    <td><input type="text" name="race" placeholder="Criollo, schnauzer, etc"></td>
+    </tr>
+
+    <tr>
+    <td><label>Sube una foto:</label></td>
+    </tr>
+    <tr>
+    <td><input type="file" name="photo"></td>
+    </tr>
+    <tr>
+    <td><textarea name="coment" placeholder="Añade más descripciónes del animalito" cols="40" rows="5"></textarea></td>
+    </tr>
+    <tr>
+    <td><input type="submit" value="Publicar!"></td>
+    </tr>
+</table>
+</form>
+    </div>  
+</div>

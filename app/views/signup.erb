@@ -1,0 +1,19 @@
+
+ <div class="top-nav">
+  <ul class="fixed">
+        <li><a href="/"><img id="logo" src="logo.png" width="140" height="43 ">
+        <li><a href="/signup">Registrate</a></li>
+        <li><a href="/login">Ingresar</a></li>
+        <li><a href="/logout">Salir</a></li>
+      </ul>
+  </div>
+
+
+<h1>Registrate</h1>
+
+<form class='caja' action="/signup" method="POST">
+    <div><label>Tu Nombre:</label><input type='text'name="user[name]" class='nombre' value=''></div>
+    <div><label>Tu Email:</label><input type='text' name="user[email]" class='email' value=''></div>
+    <div><label>Password:</label><input type='password' name="user[password]"class='pass' value=''></div>
+    <div><input type='submit' value='Enviar' class='boton'></div>
+</form>

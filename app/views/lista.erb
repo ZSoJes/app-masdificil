@@ -1,0 +1,58 @@
+<style type="text/css">
+td a{
+  text-decoration: none;
+  color: lime;
+  font-weight: bold;
+}
+td a:hover{
+  text-decoration: none;
+}
+#lista_adopcion table{
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  border:5px solid gray;
+}
+table{
+  text-align: center;
+  margin: 10px;
+  padding: 0 5px;
+}
+td img{
+  border-radius: 5px;
+}
+</style>
+<div class="activo uk-container-center">
+<div class="uk-grid">
+<%  @lista_de.each do |adopcion| %>
+<div class="uk-width-medium-1-4 uk-row-first" id="lista_adopcion">
+  <table>
+      <td><img src="<%= adopcion.photo_url(:thumb) %>"></td>
+    </tr>
+    <tr>
+      <td><strong><%= adopcion.name_pet%></strong></td>
+    </tr>
+    <tr>
+      <td><small>Mas informes y detalles</small></td>
+    </tr>
+    <tr>
+      <td><a>Aquí</a></td>
+    </tr>
+
+    <tr>
+      <td><small>Edad: <%= adopcion.age %></small></td>
+    </tr>
+    <tr>
+      <td><small>Especie: <%= adopcion.especie %></small></td>
+    </tr>
+    <tr>
+      <td><small>Raza: <%= adopcion.race %></small></td>
+    </tr>
+    <tr>
+      <td><small>Mas info: <%= adopcion.coment %></small></td>
+    </tr>
+  </table>
+  </div>
+<% end %>
+</div>
+</div>

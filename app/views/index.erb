@@ -1,0 +1,232 @@
+<style media="screen">
+    html {
+        background-image: url("/fondo3.jpg");
+        background-size: cover;
+    }
+
+    .uk-icon-star {
+        color: #e3c811;
+
+    }
+
+    .uk-icon-sign-in {
+        color: #b2da32;
+    }
+
+    .uk-icon-hand-peace-o {
+        color: #3482d4;
+
+    }
+    .uk-icon-child {
+        color: #b10b42;
+    }
+
+    .uk-icon-arrow-right {
+        color: #9a18ba;
+    }
+    .uk-icon-twitter {
+        color: #1da1f2;
+    }
+
+    .uk-icon-question {
+        color: #df7c14;
+    }
+
+.uk-icon-smile-o{
+  color:#d5a3db;
+}
+</style>
+
+<div class="uk-container uk-container-center uk-margin-top">
+
+    <nav class="uk-navbar wall2">
+        <a id="Bienvenido" href="/" class="uk-navbar-toggle uk-icon-paw uk-form-row"></a>
+        <!-- <a href="" ><img  class="uk-navbar-toggle" src="https://openclipart.org/download/247319/abstract-user-flat-3.svg" alt="avatar"></a> -->
+
+        <ul class="uk-navbar-nav uk-navbar-brand" id="ul_nav">
+            <li>
+                <a onclick="document.getElementById('id01').style.display='block'" style="width:auto; font-size:1em;">Login
+                    <i class="uk-icon-star" style="font-size:1.2em;"></i>
+                </a>
+            </li>
+            <li>
+                <a onclick="document.getElementById('id02').style.display='block'" style="width:auto; font-size:1em;">Registrate
+                    <i class="uk-icon-sign-in" style="font-size:1.2em;"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="/conocenos" style="width:auto; font-size:1em;">Conocenos
+                    <i class="uk-icon-hand-peace-o" style="font-size:1.2em;"></i>
+                </a>
+            </li>
+
+            <li>
+                <a class="adoptar" href="/adoptar" style="width:auto; font-size:1em;">Adoptar
+                    <i class="uk-icon-child" style="font-size:1.2em;"></i>
+                </a>
+            </li>
+
+            <!-- <li>
+            <a href="#">Antes Aprende...</a>
+-->
+            <li>
+                <a href="/necesidades" style="width:auto; font-size:1em;">¿Que necesito
+                    <i class="uk-icon-question" style="font-size:1.2em;"></i>
+                </a>
+            </li>
+
+            <li>
+                <a class="necesidades"href="/necesidades" style="width:auto; font-size:1em;">Cuidados
+                    <i class="uk-icon-smile-o" style="font-size:1.2em;"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="/logout" style="width:auto; font-size:1em;">SALIR
+                    <i class="uk-icon-arrow-right" style="font-size:1.2em;"></i>
+                </a>
+
+            </li>
+
+        </nav>
+        <!-- <div class="uk-container logo_usuario">
+<a href="" ><img src="https://openclipart.org/download/247319/abstract-user-flat-3.svg" alt="avatar"></a>
+</div> -->
+
+        <div class="uk-container uk-container-center perro">
+            <img src="https://az480170.vo.msecnd.net/44e8f4df-a2c6-4d53-84f1-c1d6e0db0654/img/prd/5b5be8b4-f645-46b8-95d5-c47c7d5d3873/dog.png" alt="avatar">
+        </div>
+    </div>
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate uk-panel uk-panel-box uk-form" action="/login" method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="https://openclipart.org/image/2400px/svg_to_png/203766/dog.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container_form">
+                <div class="uk-form-row uk-form-icon user_form">
+                    <i class="uk-icon-envelope"></i>
+                    <input class="email_login" placeholder="Email" type='text' name="user[email]" value=''></input>
+                </div>
+
+                <div class="uk-form-row uk-form-icon user_form">
+                    <i class="uk-icon-lock"></i>
+                    <input class="pass_login" placeholder="Contraseña" type='password' name="user[password]" value=''></input>
+                </div>
+                <div class="uk-form-row user_form_enviar">
+                    <input type='submit' class="uk-form-row uk-button uk-button-primary uk-animation-scale-up boton boton_login" value='Enviar'></input>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="id02" class="modal">
+
+        <form class="modal-content animate uk-panel uk-panel-box ">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="http://www.pd4pic.com/images/baby-cat-icon-face-cartoon-cute-pet-smile-kitty.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container_form">
+                <div class="uk-form-row uk-form-icon user_form">
+                    <i class="uk-icon-user"></i>
+                    <input class="nombre" placeholder="Nombre" type='text' name="user[name]" value=''></input>
+                </div>
+
+                <div class="uk-form-row uk-form-icon user_form">
+                    <i class="uk-icon-envelope"></i>
+                    <input class="email" placeholder="Email" type='text' name="user[email]" value=''></input>
+                </div>
+
+                <div class="uk-form-row uk-form-icon user_form">
+                    <i class="uk-icon-lock"></i>
+                    <input class="pass" placeholder="Contraseña" type='password' name="user[password]" value=''></input>
+                </div>
+                <div class="uk-form-row user_form_enviar">
+                    <input id="enviar" type='submit' class="uk-form-row uk-button uk-button-primary uk-animation-scale-up boton" value='Enviar'></input>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="carrousel">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css">
+
+        <!--Slider  -->
+        <section id="slider" class="container_slider">
+            <ul class="slider-wrapper">
+                <li class="current-slide">
+                    <img src="/imgcarrusel/log1.jpg" title="" alt="">
+                </li>
+                <li>
+                    <img src="/imgcarrusel/log2.jpg" title="" alt="">
+                </li>
+
+                <li>
+                    <img src="/imgcarrusel/log3.jpg" title="" alt="">
+                </li>
+
+                <li>
+                    <img src="http://1.bp.blogspot.com/-fP3XPlBxvzg/VDvttVCqFLI/AAAAAAAAAQM/dB51GntsSQM/s1600/Perro%2Bfeliz.jpg" title="" alt="">
+                </li>
+            </ul>
+            <!-- Sombras -->
+            <div class="slider-shadow"></div>
+
+            <!-- Controles de Navegacion -->
+            <ul id="control-buttons" class="control-buttons">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="contenido_twitter">
+
+        <style type="text/css">
+            .time_list {
+                font-size: 15px;
+                color: white;
+                border-radius: 10px;
+                background-color: #e1e8ed;
+                width: 250px;
+                padding: 10px;
+                box-shadow: 2px 2px 8px gray;
+                margin: 10px;
+                position: fixed;
+                right: 1%;
+                top: 32%;
+            }
+            .time_list p {
+                border: 2px dotted white;
+                border-radius: 5px;
+                background: #1da1f2;
+            }
+            #twit {
+                color: rgb(44, 43, 46);
+                font-weight: bold;
+                text-align: center;
+                text-shadow: 2px 2px 8px gray;
+            }
+
+        </style>
+        <% if @search%>
+        <div class="time_list">
+            <a id="twit" href="https://twitter.com/search?q=%23adopcion&src=typd" style="width:auto; font-size:2em;">Twitter
+                <i class="uk-icon-twitter" style="font-size:1.2em;"></i>
+            </a>
+            <% @search.each do |t| %>
+            <p><%= t.text %></p>
+            <% end %>
+        </div>
+        <% end %>
+    </div>
+
+    <div class="contenido"></div>
